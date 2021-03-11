@@ -109,6 +109,10 @@ mongoose
 
     //? Find all books in our DB
     return Book.find({});
+
+    // Could also pass a MongoDB query like the $gt
+    // The query below gets all books in which the pages number are bigger than 800
+    // return Book.find({pages: {$gt: 800}})
   })
   .then(allBooks => {
     console.log('🔍 I searched the DB and found these books: ', allBooks);
